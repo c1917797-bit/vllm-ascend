@@ -61,3 +61,7 @@ presented as a validated optimization or enabled in production. See
 The full step-by-step piercing record, including raw three-run measurements,
 artifact hashes, failure classification, and recovery commands, is in
 `docs/source/developer_guide/performance_and_debug/qwen36_drrqr_full_piercing_report.md`.
+
+A step-by-step methodological audit against the supplied successful HYPIC
+practice is in
+`docs/source/developer_guide/performance_and_debug/qwen36_drrqr_vs_hypic_audit.md`.
