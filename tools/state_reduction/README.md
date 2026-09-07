@@ -5,10 +5,17 @@ RRQR/DRRQR state-reduction method from *The Key to State Reduction in Linear
 Attention: A Rank-based Perspective* on Qwen3.6 packed Gated DeltaNet
 checkpoints.
 
-The code is experimental and is not wired into the vLLM Ascend runtime. The
-capture installer only accepts one pinned v0.23.0 GDN source hash and is meant
-for a disposable experiment container. It refuses source drift before making
-an edit.
+The legacy capture/checkpoint workflow below is experimental. Its capture
+installer only accepts one pinned v0.23.0 GDN source hash and is meant for a
+disposable experiment container. It refuses source drift before making an edit.
+
+A separate opt-in **load-time monkeypatch** now lives in
+`vllm_ascend/patch/worker/patch_drrqr.py`. It loads the original checkpoint using
+a plan from `prepare_drrqr_plan.py`; it does not rewrite checkpoint shards or
+edit `gdn.py`. See the
+[monkeypatch guide](../../docs/source/developer_guide/performance_and_debug/drrqr_monkeypatch.md)
+for the pinned newer-runtime contract, commands, CPU tests and remaining NPU
+gates. The old capture installer is not compatible with that newer runtime.
 
 ## Workflow
 
