@@ -57,3 +57,7 @@ The observed Dk64 and Dk96 candidates failed the frozen GSM8K quality gate.
 Their performance intervals also overlapped the baseline. They must not be
 presented as a validated optimization or enabled in production. See
 `docs/source/developer_guide/performance_and_debug/qwen_gdn_drrqr_experiment.md`.
+
+The full step-by-step piercing record, including raw three-run measurements,
+artifact hashes, failure classification, and recovery commands, is in
+`docs/source/developer_guide/performance_and_debug/qwen36_drrqr_full_piercing_report.md`.
